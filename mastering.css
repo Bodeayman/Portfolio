@@ -271,7 +271,7 @@ meter {
 
 .skillcon {
     width: 25%;
-    padding: 50px;
+    padding: 20px;
     font-size: 1.5em;
     background-color: black;
     border-radius: 10px;
@@ -477,12 +477,23 @@ footer {
 
     }
 
-    header {
-        padding: 5px;
+    nav {
+        /* position: relative;
+        left: 20px; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 10px;
+
     }
 
-    header a {
-        padding-left: 0px;
+    nav a {
+        padding-left: 10px;
+    }
+
+    header .logo a {
+        font-size: 10px;
+        text-wrap: nowrap;
     }
 
     footer {
@@ -495,8 +506,32 @@ footer {
 }
 
 @media (max-width:400px) {
+    nav {
+        /* position: relative;
+        left: 20px; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: 10px;
+
+    }
+
+    .main {
+        padding: 30px;
+    }
+
+    nav a {
+        padding-left: 10px;
+    }
+
+    header .logo a {
+        font-size: 10px;
+        text-wrap: nowrap;
+    }
+
     .profileImage {
-        display: none;
+        width: 150px;
+        height: 150px;
     }
 
     section {
@@ -510,6 +545,10 @@ footer {
     .skillimg {
         padding: 0px;
 
+    }
+
+    .about p {
+        padding: 10px;
     }
 
     .skillcon {
