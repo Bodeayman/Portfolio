@@ -35,18 +35,19 @@ header {
 
 }
 
-header a {
-    color: #67bcc9;
-    padding-left: 10px;
-    text-decoration: none;
-
+nav {
+    background-color: #eee;
 }
+
+
+
+
 
 header a:hover {
     color: #aeccd1;
 }
 
-header .logo a {
+.navbar-brand {
     font-weight: bold;
     color: blue;
     font-size: 1.1em;
@@ -57,8 +58,12 @@ header .logo a {
     -o-transition: 0.7 ease;
 }
 
-header .logo a:hover {
-    color: rgb(81, 81, 210);
+.nav-item {
+    margin: 0px 20px 0px 20px;
+    color: #67bcc9;
+    padding-left: 10px;
+    text-decoration: none;
+
 }
 
 section {
