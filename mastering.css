@@ -2,6 +2,12 @@
     --firstColor: #3a6cf4;
     --secondColor: #4a6cf4;
     --shadow: 5px 5px 5px rgb(87, 89, 80);
+    --blackFirst: #1d1b26;
+    --blackSecond: #06191d;
+    --blackThird: #fd2d00;
+    --blackFourth: #00c5c8;
+    --blackFivth: #df007c;
+    --blackSixth: #70e7d1;
 }
 
 body {
@@ -76,9 +82,14 @@ section {
     /* Don't ever use the margin again and you have the flex box asshole */
     display: flex;
     align-items: center;
-    background-color: #67bcc9;
+    background-color: #1d1b26;
     justify-content: space-around;
     background-attachment: fixed;
+}
+
+.main h1,
+.main p {
+    color: white;
 }
 
 meter {
@@ -104,6 +115,8 @@ meter {
     -moz-transition: 0.7s ease;
     -ms-transition: 0.7s ease;
     -o-transition: 0.7s ease;
+    /* Color and filter */
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
 
 }
 
@@ -115,6 +128,8 @@ meter {
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+
 }
 
 .main .View {
@@ -139,12 +154,9 @@ meter {
 }
 
 .main .View:hover {
-    transform: scale(100);
+
     background-color: var(--secondColor);
-    -webkit-transform: scale(100);
-    -moz-transform: scale(100);
-    -ms-transform: scale(100);
-    -o-transform: scale(100);
+    padding: 28px;
     filter: brightness(1.3);
     -webkit-filter: brightness(1.3);
 }
@@ -166,19 +178,32 @@ meter {
     animation-name: image-hover;
     animation-duration: 1s;
     position: relative;
-    border-radius: 200px;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    -ms-border-radius: 200px;
-    -o-border-radius: 200px;
+    width: fit-content;
+    height: fit-content;
+    animation-name: imageShow;
+    animation-duration: 1.5s;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
 }
 
 .about {
     border-top: 5px solid black;
-
-    background-color: var(--firstColor);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blackFourth);
 
 }
+
+.about img {
+    width: 350px;
+    height: 80%;
+    animation-name: imageShow;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+}
+
+
 
 .about h1 {
     text-align: center;
@@ -195,7 +220,7 @@ meter {
 .services {
     border-top: 5px solid black;
     border-bottom: 5px solid black;
-    background-color: rgb(75, 92, 207);
+    background-color: var(--blackSecond);
 
 }
 
@@ -242,11 +267,12 @@ meter {
 .skills h1 {
     text-align: center;
     font-size: 200%;
+    color: black;
 }
 
 .skills {
     color: white;
-    background-color: rgb(114, 108, 108);
+    background-color: var(--blackSixth);
     border-top: 5px solid black;
 
 }
@@ -269,7 +295,8 @@ meter {
 
 .groupskills {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
@@ -345,7 +372,7 @@ meter {
 }
 
 .projects {
-    background-color: black;
+    background-color: var(--blackFirst);
     padding: 20px;
 
 
@@ -401,22 +428,45 @@ meter {
 .contact {
     border-top: 5px solid black;
 
-    background-color: rgb(145, 222, 224);
+    background-color: var(--blackSixth);
 }
 
 footer .copy {
     margin-top: 4%;
+    color: white;
 }
 
 footer {
     border-top: 5px solid black;
 
-    background-color: rgb(8, 140, 228);
+    background-color: var(--blackSecond);
 
     font-size: 25px;
     padding: 25px;
     display: flex;
     justify-content: space-around;
+}
+
+header .logo a {
+    font-weight: bold;
+    color: var(--firstColor);
+    text-decoration: none;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -ms-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+}
+
+header .logo a:hover {
+    filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);
+}
+
+nav a {
+    color: #3a6cf4;
+    text-decoration: none;
+    margin: 0px 20px;
 }
 
 .project-info {
@@ -448,6 +498,11 @@ footer {
     color: purple;
 }
 
+.contactForm * {
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
 
 @keyframes image-hover {
     from {
@@ -522,12 +577,17 @@ footer {
 
     }
 
+    .about {
+        flex-direction: column;
+    }
+
     .main {
         padding: 30px;
     }
 
     nav a {
         padding-left: 10px;
+        margin: 0px 5px;
     }
 
     header .logo a {
@@ -568,6 +628,24 @@ footer {
 
 
 }
+
+
+
+/* For all images in the scope */
+@keyframes imageShow {
+    0% {
+        opacity: 0;
+        position: relative;
+        top: 200px;
+    }
+
+    100% {
+        opacity: 1;
+        position: relative;
+        top: 0px;
+    }
+}
+
 
 /* 
 My changes are 

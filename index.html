@@ -5,73 +5,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="mastering.css">
-        <link rel="stylesheet" href="bootstrap.min.css">
-
+        <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+        <script src="jQuery/jQuery.js"></script>
+        <script>
+            $(document).ready(function () { })
+        </script>
         <title>My Portfolio</title>
     </head>
 
     <body>
         <header>
-            <!-- <div class="logo">
+            <div class="logo">
                 <a href="#">Abdullah Ayman</a>
-            </div> -->
-            <!-- <nav>
+            </div>
+            <nav>
                 <a href="#about">About me</a>
                 <a href="#services">Services</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
-            </nav> -->
-            <!--  -->
-            <nav class="navbar navbar-expand-lg" style="background-color:#eee;">
-                <div class="container" style="background-color:#eee;">
-                    <a class="navbar-brand" href="#">Abdullah Ayman</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">About me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#services">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#skills">Skills</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#projects">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact me</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a> -->
-                                <!-- <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li> -->
-                        </ul>
-
-                    </div>
-                </div>
             </nav>
-
+            <!--  -->
         </header>
         <section class="main">
             <div>
@@ -89,18 +43,25 @@
                 </div>
             </div>
 
-            <img class="profileImage" src="images/Personalimage.png">
+            <img class="profileImage" src="images/personalImage.png">
             <!-- To make the hyperlinks move the pages sections you have to write the html pages id in the secitons -->
         </section>
         <section class="about" id="about">
-            <h1>About Me</h1>
-            <p>I'm Abdullah A full stack developer and a student in UST-ZC Computer Science and An ECPC Competitive and
-                a competitve programmer in Codeforces, I'm enthusiast about learning new technologies in the frontend
-                and
-                the backend and solving problems and creating friendly User Interfaces for your business and your
-                website, and i love creating and learning new things , I have a great proficiency in HTML,CSS,JS,PHP
-                I'm dreaming about working in the faang company or make my own startup .
-            </p>
+            <div>
+                <h1>About Me</h1>
+                <p>I'm Abdullah A full stack developer and a student in UST-ZC Computer Science and An ECPC Competitive
+                    and
+                    a competitve programmer in Codeforces, I'm enthusiast about learning new technologies in the
+                    frontend
+                    and
+                    the backend and solving problems and creating friendly User Interfaces for your business and your
+                    website, and i love creating and learning new things , I have a great proficiency in HTML,CSS,JS,PHP
+                    I'm dreaming about working in the faang company or make my own startup .
+                </p>
+            </div>
+            <div>
+                <img src="images/ecpc.png">
+            </div>
 
 
         </section>
@@ -214,7 +175,7 @@
                 <div class="anotherskills" style="display:flex;flex-direction:column;">
                     <h1>I also have a knowledge in</h1>
 
-                    <div class="groupskills">
+                    <div class="groupskills" style="display:flex;flex-direction:row;flex-wrap:wrap;">
                         <div class="skillcon">
                             <div class="skill">
                                 <img class="skillimg" src="images/database.svg"
@@ -257,6 +218,7 @@
                             </div>
                             <div>Bootstrap</div>
                         </div>
+
                     </div>
                 </div>
 
@@ -369,6 +331,15 @@
         <section class="contact" id="contact">
             <h1>Contact</h1>
             <div class="group">
+                <form class="contactForm" style="display:flex;flex-direction:column;">
+                    <input type="text" placeholder="Enter your name">
+                    <input placeholder="Enter your email" type="email">
+                    <textarea placeholder="Enter your response" cols="50" rows="9"></textarea>
+                    <input type="submit"
+                        style="background-color:green;font-weight:bold;padding:10px;color:white;border-radius:50px;border:none;">
+                </form>
+            </div>
+            <div class="group">
                 <div class="card">
                     <img src="images/phone-solid.svg">
 
@@ -395,6 +366,8 @@
             </div>
         </footer>
         <script src="bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+
     </body>
 
 </html>
