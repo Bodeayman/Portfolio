@@ -567,6 +567,10 @@ nav a {
 }
 
 @media (max-width:400px) {
+    .contactForm * {
+        width: 80%;
+    }
+
     nav {
         /* position: relative;
         left: 20px; */
